@@ -1,0 +1,65 @@
+@use 'variables';
+@use 'mixins';
+
+/* sección dos */
+.allSections{
+    @include mixins.create-flexbox(space-between);
+    height: 500px;
+    
+    .shopSection{
+        background-image: url('../../src/assets/umbrellaSection.png');
+        @include mixins.backgroundImage();
+
+        button{
+            @include mixins.btnShop();
+        }
+    }
+
+    .imageSection{
+        height: 100%;
+        width: 50%;
+        @include mixins.create-flexbox(center);
+        flex-direction: column;
+        font-size: 20px;
+        text-align: center;
+
+        p{
+            width: 50%;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 16px;
+            color: variables.$color-primary;
+            margin-top: 30px;
+        }
+        
+        hr{
+            width: 40px;
+        }
+
+        .iconRight{
+            font-size: 14px;
+            padding-right: 5px;
+        }
+    }
+}
+
+
+/* seccion puff */
+.imagePuffSection{
+    background-image: url('../../src/assets/thirdSectionImage.png');
+    @include mixins.backgroundImage();
+}
+
+/* seccion cuatro */
+.imageCartSection{
+    background-image: url('../../src/assets/cartImageKid.png');
+    @include mixins.backgroundImage();
+}
+
+/* seccion cinco */
+.imageNapSection{
+    background-image: url('../../src/assets/fifthImage.png');
+    @include mixins.backgroundImage();
+}

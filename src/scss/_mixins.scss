@@ -1,0 +1,32 @@
+
+@mixin create-flexbox($justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+};
+
+@mixin btnShop(){
+    background-color: transparent;
+    border: solid 3px white;
+    color: white;
+    margin-top: 50px;
+    padding: 5px;
+    width: 110px;
+    height: 50px;
+    letter-spacing: 2px;
+    background-color: rgba(36, 36, 36, 0.6);
+    cursor: pointer;
+};
+
+@mixin backgroundImage(){
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    };
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

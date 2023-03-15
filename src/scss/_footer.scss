@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'mixins';
+
+/* footer */
+.divFooter{
+    .footerContainer{
+        padding: 10px 50px;
+        font-size: 14px;
+        @include mixins.create-flexbox(space-between);
+
+        .pufiLogo{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    }
+
+    .divHrFooter{
+        @include mixins.create-flexbox(center);
+
+        .hrfooter{
+            width: 92%;
+            border: 1px solid rgba(179, 179, 179, 0.3);
+        }
+    }
+    
+    .copyrightContainer{
+        @include mixins.create-flexbox(space-between);
+
+        padding: 10px 50px;
+
+        p{
+            color: variables.$color-primary;
+            font-size: 12px;
+        }
+
+        img{
+            padding-top: 5px;
+            height: 30px;
+            width: auto;
+        }
+    }
+}
+
+

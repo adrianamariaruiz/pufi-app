@@ -1,0 +1,49 @@
+@use 'variables';
+@use 'mixins';
+
+/* newsletter */
+.newsletterContainer{
+    @include mixins.create-flexbox(center);
+    flex-direction: column;
+    margin: 20px;
+
+    .pNewsletter{
+        color: variables.$color-primary;
+        font-size: 14px;
+    }
+    
+    .pSubscribe {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .formDiv{
+        margin-bottom: 80px;
+        text-align: center;
+        
+        form{
+            border: solid 1px black;
+            width: 600px;
+            padding: 5px;
+            @include mixins.create-flexbox(space-between);
+            
+            input{
+                padding: 5px;
+                width: 550px;
+                border-style: none;
+                outline: none;
+            }
+
+            .btnRow{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .errorEmailMessage{
+            color: red;
+            margin-top: 15px;
+        }
+    }
+}

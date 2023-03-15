@@ -1,0 +1,28 @@
+@use 'mixins';
+
+/* Primera sección */
+.firstSection{
+    height: 500px;
+    @include mixins.create-flexbox(center);
+    flex-direction: column;
+    padding-top: 50px;
+    color: white;
+
+    .titleDiv{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bolder;
+    }
+
+    button{
+        @include mixins.btnShop();
+    }
+    
+    .circleP{
+        font-size: 40px;
+        font-weight: bolder;
+        letter-spacing: 5px;
+    }
+
+}
+

@@ -8,13 +8,35 @@
         font-size: 14px;
         @include mixins.create-flexbox(space-between);
 
+        @include mixins.mobile {
+            flex-direction: column;
+            padding: 10px 5px;
+        }
+
         .pufiLogo{
             font-size: 30px;
             font-weight: bolder;
         }
+
+        .pufiDivFooter{
+            @include mixins.mobile {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .contactDivFooter{
+            @include mixins.mobile {
+                display: flex;
+                gap: 5px;
+                font-size: 12px;
+                padding: 5px 0px;
+            }
+        }
     }
 
     .divHrFooter{
+
         @include mixins.create-flexbox(center);
 
         .hrfooter{

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import nap from '../assets/nap.png'
+import napImage from '../assets/fifthImage.png'
 
 const NapSection = () => {
   return (
@@ -12,7 +13,9 @@ const NapSection = () => {
             <p>Descripción del producto. Este es un texto simulado</p>
             <a href='#'><FontAwesomeIcon icon={faAngleRight} className='iconRight'/>VER MAS</a>
         </div>
-        <div className='imageNapSection'></div>
+        <div className='imageNapSection'>
+          <img src={napImage} alt="napImage" />
+        </div>
     </section>
   )
 }

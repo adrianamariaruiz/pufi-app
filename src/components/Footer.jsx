@@ -13,13 +13,13 @@ const Footer = () => {
                 <div>
                     <p className='pufiLogo'>Pufi</p>
                 </div>
-                <div>
+                <div className='pufiDivFooter'>
                     <p>PUFI RAIN</p>
                     <p>PUFI PUFF</p>
                     <p>PUFI CART</p>
                     <p>PUFI NAP</p>
                 </div>
-                <div>
+                <div className='contactDivFooter'>
                     <p>CONTACTO</p>
                     <p>AYUDA</p>
                     <p>COMO COMPRAR</p>

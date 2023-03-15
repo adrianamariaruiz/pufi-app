@@ -1,14 +1,37 @@
 @use 'variables';
 @use 'mixins';
 
-/* sección dos */
 .allSections{
     @include mixins.create-flexbox(space-between);
     height: 500px;
+
+    @include mixins.tablet {
+        height: 350px;
+    }
+
+    @include mixins.mobile {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
     
     .shopSection{
-        background-image: url('../../src/assets/umbrellaSection.png');
-        @include mixins.backgroundImage();
+        width: 50%;
+        height: 100%;
+        @include mixins.create-flexbox(center);
+        position: relative;
+
+        @include mixins.mobile {
+            width: 100%;
+            height: 300px;
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+        }
 
         button{
             @include mixins.btnShop();
@@ -23,8 +46,19 @@
         font-size: 20px;
         text-align: center;
 
+        @include mixins.mobile {
+            width: 100%;
+            padding-top: 10px;
+        }
+
         p{
             width: 50%;
+
+            @include mixins.mobile {
+                width: 80%;
+                margin-top: 10px;
+            }
+
         }
 
         a{
@@ -32,6 +66,11 @@
             font-size: 16px;
             color: variables.$color-primary;
             margin-top: 30px;
+
+            @include mixins.mobile {
+                margin: 20px 0px;
+
+            }
         }
         
         hr{
@@ -45,21 +84,19 @@
     }
 }
 
+.imagePuffSection, .imageCartSection, .imageNapSection{
+    width: 50%;
+    height: 100%;
+    display: flex;
 
-/* seccion puff */
-.imagePuffSection{
-    background-image: url('../../src/assets/thirdSectionImage.png');
-    @include mixins.backgroundImage();
+    @include mixins.mobile {
+        width: 100%;
+    }
+    
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
-/* seccion cuatro */
-.imageCartSection{
-    background-image: url('../../src/assets/cartImageKid.png');
-    @include mixins.backgroundImage();
-}
-
-/* seccion cinco */
-.imageNapSection{
-    background-image: url('../../src/assets/fifthImage.png');
-    @include mixins.backgroundImage();
-}

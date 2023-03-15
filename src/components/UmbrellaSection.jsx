@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import umbrellaPicture from '../assets/umbrella.png'
+import umbrellaImage from '../assets/umbrellaSection.png'
 
 const UmbrellaSection = () => {
   return (
     <>
         <section className='allSections'>
           <div className='shopSection'>
+            <img src={umbrellaImage} alt="umbrellaImage" />
             <button>SHOP</button>
           </div>
           <div className='imageSection'>

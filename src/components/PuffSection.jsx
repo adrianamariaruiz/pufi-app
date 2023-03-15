@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import puff from '../assets/puff.png'
+import puffImage from '../assets/thirdSectionImage.png'
 
 const PuffSection = () => {
   return (
@@ -13,6 +14,7 @@ const PuffSection = () => {
             <a href='#'><FontAwesomeIcon icon={faAngleRight} className='iconRight'/>VER MAS</a>
         </div>
         <div className='imagePuffSection'>
+          <img src={puffImage} alt="puff image" />
         </div>
     </section>
   )

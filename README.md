@@ -7,7 +7,7 @@
 ![imagen prototipo 3](/src/assets/imagesmd/proto3.png "prototipo")
 
 ## Resultado
-[app aquí]()
+[Visita la app AQUÍ!]('https://pufi-app-adriruiz.netlify.app/')
 
 ![imagen prototipo 1](/src/assets/imagesmd/result1.png "prototipo")
 ![imagen prototipo 1](/src/assets/imagesmd/result2.png "prototipo")

@@ -3,7 +3,6 @@ import { emailUser } from "./pufiSlice"
 
 export const getEmail = ( email ) => {
     return async( dispatch, getState ) => {
-        console.log(getState)
 
         const resp = await fetch('https://formspree.io/f/mleklpny', {
             method: 'POST',

@@ -5,6 +5,8 @@ import Swal from 'sweetalert2'
 import { useDispatch } from 'react-redux'
 import { getEmail } from '../store/slices/pufi/thunk'
 
+const regexEmail = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/
+
 const Newsletter = () => {
 
   const dispatch = useDispatch()
@@ -12,11 +14,8 @@ const Newsletter = () => {
   const [ userEmail, setUserEmail ] = useState('')
   const [ errorEmail, setErrorEmail ] = useState('')
 
-  const regexEmail = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/
-
   const handleSubmitEmail = useCallback((e) => {
     e.preventDefault()
-    console.log('enviaste el email: ', userEmail)
 
     if(!regexEmail.test(userEmail)){
       setErrorEmail('Formato de email inválido, intentelo de nuevo')
